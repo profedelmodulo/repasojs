@@ -11,3 +11,10 @@ var d = "12";
 console.log(a * d);
 console.log(a + d);
 console.log(a + +d);
+
+//UNDEFINED Y NULL
+var value;//Value = undefined
+console.log(value);
+value = null;
+console.log(typeof value);
+
