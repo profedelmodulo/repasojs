@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS</title>
+<meta charset="UTF-8" >
+<script>
+//Ejercicio 1
+/*var msg = "Te llamas :nombre:, tienes :edad: y estás :estadocivil:";
+msg = msg.replace(":nombre:",prompt("¿Cómo te llamas?")); 
+msg = msg.replace(":edad:",prompt("Cuántos años tienes?","")); 
+msg = msg.replace(":estadocivil:",prompt("¿Cuál es tu estado civil?","")); 
+alert(msg);*/ /* ... */
+
+//Ejercicio 2
+/*var num1 = parseInt(prompt("Introduce un número 1", ""));
+var num2 = parseInt(prompt("Introduce un número 2", ""));
+alert("La suma es " + (num1 + num2) + " y el producto es " + (num1 * num2));
+*/
+
+//Ejercicio 3
+var display = document.getElementById("display"); 
+//display.innerHTML = "";
+var nombre = "Richard Stallman ", edad = 63;
+display.innerHTML = nombre + "<br />" + edad;
+</script>
+
+</head>
+<body>
+<div id="display"></div>
+
+<!--<script src="script.js"></script>-->
+<script>
+//Ejercicio 1
+/*var msg = "Te llamas :nombre:, tienes :edad: y estás :estadocivil:";
+msg = msg.replace(":nombre:",prompt("¿Cómo te llamas?")); 
+msg = msg.replace(":edad:",prompt("Cuántos años tienes?","")); 
+msg = msg.replace(":estadocivil:",prompt("¿Cuál es tu estado civil?","")); 
+alert(msg);*/ /* ... */
+
+//Ejercicio 2
+/*var num1 = parseInt(prompt("Introduce un número 1", ""));
+var num2 = parseInt(prompt("Introduce un número 2", ""));
+alert("La suma es " + (num1 + num2) + " y el producto es " + (num1 * num2));
+*/
+
+//Ejercicio 3
+/*var display = document.getElementById("display"); 
+display.innerHTML = "";
+var nombre = "Richard Stallman ", edad = 63;
+display.innerHTML = nombre + "<br />" + edad;*/
+
+//Ejercicio 4
+//[0..n-1]
+//[1..N]
+/*var display = document.getElementById("display");
+display.innerHTML = "";
+for(var i = 1; i<= 25; i++){
+	display.innerHTML += i * 11 + " ";
+}*/
+
+//Ejercicio 5
+var numeroMayor = 0;
+
+do {
+	var nuevoNumero = parseInt(prompt("Introduce el número",""));
+	numeroMayor = (nuevoNumero > numeroMayor) ? nuevoNumero : numeroMayor;
+}while(nuevoNumero != 0); 
+alert("El número mayor ha sido " + numeroMayor); 
+
+
+</script>
+</body>
+
+</html>
+
