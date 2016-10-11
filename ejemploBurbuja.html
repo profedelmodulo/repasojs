@@ -1,0 +1,35 @@
+d>
+<script>
+window.onload=function(){
+document.addEventListener("click",documento,true);
+
+document.addEventListener("click",documento1,true);
+
+document.getElementById("boton").addEventListener("click",pboton,true);
+} 
+
+function documento() {
+//console.log(arguments.callee.caller.name);
+console.log('doc: ' + this.nodeType.toString());
+console.log('doc: ' + this.nodeName.toString());
+alert("documento un sentido - burbuja");}
+
+function documento1() { 
+console.log('doc1: ' + this.nodeType.toString());
+console.log('doc: ' + this.nodeName.toString());
+alert("documento OTRO sentido - no burbuja");}
+
+function pboton() {
+console.log('pboton: ' + this.nodeType.toString());
+console.log('doc: ' + this.nodeName.toString());
+alert("boton");}
+</script>
+
+
+
+</script>
+</head>
+<body>
+<button id="boton">pulsame</button>
+</body>
+</html>
