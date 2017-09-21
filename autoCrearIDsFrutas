@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <link rel="stylesheet" type="text/css" href="estilos.css" hreflang=”es”> 
+</head>
+<body>
+<div id="contenedor">
+<h1>Frutas "El Pupas"</h1>
+    <div id="izquierda">
+        <div id="aguacate" class="fpeque">
+          <img src="imagenes/aguacate.jpg" class="peque">
+          <div>
+            <p>ref: <span>aguacate</span></p>
+            <p>precio: <span>5</span>€ Kg</p>
+          </div>
+        </div>
+        <div id="albaricoque" class="fpeque">
+          <img src="imagenes/albaricoque.jpg" class="peque">
+          <div>
+            <p>ref: <span>albaricoque</span></p>
+            <p>precio: <span>3</span>€ Kg</p>
+          </div>
+        </div>    
+    </div>
+    <div id="factura">
+       <div id="ffac"></div>
+       <form id="miform" action="*" >
+          <label for="dni">DNI: </label><input type="text" id="dni" value="" placeholder="123456789X"><br>
+          <label for="ref">Ref: </label><input type="text" id="ref" value="" placeholder="ref" disabled="true"><br>
+          <label for="precio">Precio: </label><input type="text" id="precio" value="" placeholder="000.00" disabled="true"><br>
+          <label for="cantidad">Cantidad: </label><input type="text" id="cantidad" value="" placeholder="en KG">
+          <button id="grabar" class="mar_t_10">Grabar</button> <button id="cancelar" class="mar_t_10">Cancelar</button>
+       </form>
+
+       <table id="lineas">
+          <colgroup>
+             <col><col><col><col><col><col>
+          </colgroup>
+          <tfoot>
+              <tr>
+                 <td colspan="4">Total</td><td class="total a_derecha">0</td>
+              </tr>
+          </tfoot>
+          <tr>
+             <th class="ancho1" >DNI</th><th class="ancho2">Ref.</th><th class="ancho3">Precio</th><th class="ancho3">Cantidad</th><th class="ancho3">Total</th><th class="ancho3"></th>
+          </tr>
+     
+       </table>
+       <button id="recuperar" class="mar_t_10">Recuperar tabla</button> <button id="almacenar" class="mar_t_10">Almacenar tabla</button>    
+    </div>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', autoIDs);
+  function autoIDs(){
+    //1) Coger atributo imagenes/fresas.jpg
+    //var ruta = document.getElementsByTagName('img')[0].getAttribute('src');
+    var tagsIMG = document.getElementsByTagName('img');
+    for(var i=0;i<tagsIMG.length;i++){
+      console.log(tagsIMG[i]);
+      var ruta = tagsIMG[i].getAttribute('src');
+      console.log(ruta);
+      var res = ruta.split("/");
+      console.log(res);
+      var nombreFoto = res[1];
+      console.log(nombreFoto);
+      var nombreSinExtension = nombreFoto.split(".");
+      console.log("El nombre extraído es " + nombreSinExtension[0]); 
+      //3 Crear atributo ID a IMG con valor "el nombre de la fruta"
+      tagsIMG[i].setAttribute("id_fruta", nombreSinExtension[0]);   
+    }   
+  }
+</script>
+</body>
+</html>
